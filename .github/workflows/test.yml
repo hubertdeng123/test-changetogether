@@ -9,8 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     name: "ChangeTogether test"
     steps:
+      - name: Print sha
+        shell: bash
+        run: echo ${{ github.event.sha }}
       - name: Run Action
         uses: getsentry/hackweek-changetogether@main
         with:
           repo: ${{ github.repository }}
-          target_rev: ${{ github.sha }}
+          target_rev: ${{ github.event.sha }}
