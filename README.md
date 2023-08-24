@@ -1,7 +1,9 @@
-# This is a program that prompts for your first name and then greets you
+# This is a program that prompts for your full name and then greets you
 
 ## How to use
 
 1. Enter in your first name
 2. Press Enter
-3. Observe a personalized greeting!
+3. Enter in your last name
+4. Press Enter
+5. Observe a personalized greeting!
