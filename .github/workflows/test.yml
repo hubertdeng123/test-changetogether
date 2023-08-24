@@ -1,0 +1,19 @@
+name: Test
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+
+jobs:
+  check-file-changes:
+    runs-on: ubuntu-latest
+    name: "ChangeTogether test"
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3
+
+      - name: Run Action
+        uses: getsentry/hackweek-changetogether@main
+        with:
+          repo: $GITHUB_REPOSITORY
+          target_rev: $GITHUB_SHA
